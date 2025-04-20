@@ -152,6 +152,7 @@ def get_safer_globals():
 		dict=safe_globals["dict"],
 		args=form_dict,
 		frappe=NamespaceDict(
+			call=frappe.call,
 			db=NamespaceDict(
 				count=frappe.db.count,
 				exists=frappe.db.exists,
